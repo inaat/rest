@@ -1,0 +1,252 @@
+-- Complete Menu Import SQL
+-- Categories First
+INSERT INTO `tbl_food_menu_categories` (`id`, `category_name`, `description`, `company_id`, `user_id`) VALUES
+(1, 'APPETIZER', 'Appetizer Items', 1, 1),
+(2, 'SOUPS', 'Soup Items', 1, 1),
+(3, 'PIZZA', 'Pizza Items', 1, 1),
+(4, 'TWISTER', 'Twister Items', 1, 1),
+(5, 'INJECTED BROAST', 'Broast Items', 1, 1),
+(6, 'BURGER & SANDWICHES', 'Burgers and Sandwiches', 1, 1),
+(7, 'MAIN COURSE', 'Main Course Items', 1, 1),
+(8, 'STEAK', 'Steak Items', 1, 1),
+(9, 'PASTA', 'Pasta Items', 1, 1),
+(10, 'CHINESE PLATTER', 'Chinese Items', 1, 1),
+(11, 'DESSERT', 'Dessert Items', 1, 1),
+(12, 'HOT BEVERAGES', 'Hot Drinks', 1, 1),
+(13, 'COLD BEVERAGES', 'Cold Drinks', 1, 1),
+(14, 'SOFT DRINKS', 'Soft Drinks', 1, 1);
+
+-- APPETIZER ITEMS
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(1, 'APP-001', 'Supreme Nachos', '', 1, '', 495, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 495, 495, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(2, 'APP-002', 'Arabic Fries Nuggets (6Pcs)', '', 1, '', 450, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(3, 'APP-003', 'Chicken Strips (6Pcs)', '', 1, '', 495, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 495, 495, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(4, 'APP-004', 'Fully Loaded Fries', '', 1, '', 550, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 550, 550, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(5, 'APP-005', 'Cheese Fries', '', 1, '', 450, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(6, 'APP-006', 'Garlic Mayo Fries', '', 1, '', 350, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 350, 350, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(7, 'APP-007', 'French Fries', '', 1, '', 299, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 299, 299, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(8, 'APP-008', 'Fish & Chips (4Pcs)', '', 1, '', 899, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 899, 899, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(9, 'APP-009', 'Cheese Ball (4Pcs)', '', 1, '', 650, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 650, 650, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(10, 'APP-010', 'Hummus', '', 1, '', 370, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 370, 370, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(11, 'APP-011', 'B.B.Q Wings (6Pcs)', '', 1, '', 370, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 370, 370, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(12, 'APP-012', 'Hot Wings (6Pcs)', '', 1, '', 320, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 320, 320, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(13, 'APP-013', 'Hot Shots (12Pcs)', '', 1, '', 599, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 599, 599, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(14, 'APP-014', 'Honey Mustard Wings (6Pcs)', '', 1, '', 370, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 370, 370, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(15, 'APP-015', 'Honey B.B.Q Wings (6Pcs)', '', 1, '', 370, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 370, 370, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(16, 'APP-016', 'Buffalo Wing (6Pcs)', '', 1, '', 370, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 370, 370, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- SOUPS
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(17, 'SOUP-001', 'Cheese Bite Special Soup', '', 2, 'Single', 200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 200, 200, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(18, 'SOUP-002', 'Hot & Sour Soup', '', 2, 'Single', 150, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 150, 150, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(19, 'SOUP-003', 'Chicken Corn Soup', '', 2, 'Single', 150, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 150, 150, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- TWISTER
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(20, 'TWIST-001', 'Cheese Bite Special Wrap', '', 4, '', 400, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 400, 400, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(21, 'TWIST-002', 'Grilled Chicken Cheese Wrap', '', 4, '', 400, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 400, 400, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(22, 'TWIST-003', 'Zinger Wrap', '', 4, '', 350, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 350, 350, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(23, 'TWIST-004', 'Arabic Shawarma', '', 4, '', 380, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 380, 380, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(24, 'TWIST-005', 'Zinger Shawarma', '', 4, '', 280, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 280, 280, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(25, 'TWIST-006', 'Chicken Cheese Shawarma', '', 4, '', 260, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 260, 260, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(26, 'TWIST-007', 'Chicken Shawarma', '', 4, '', 200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 200, 200, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(27, 'TWIST-008', 'B.B.Q Paratha Roll', '', 4, '', 300, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 300, 300, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(28, 'TWIST-009', 'Zinger Paratha Roll', '', 4, '', 350, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 350, 350, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(29, 'TWIST-010', 'Behare Roll', '', 4, '', 450, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(30, 'TWIST-011', 'Pizza Paratha', '', 4, '', 450, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(31, 'TWIST-012', 'Chicken Paratha', '', 4, '', 350, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 350, 350, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- INJECTED BROAST
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(32, 'BROAST-001', 'Full Broast (8Pcs)', '', 5, '', 1999, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 1999, 1999, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(33, 'BROAST-002', 'Half Broast (4Pcs)', '', 5, '', 999, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 999, 999, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(34, 'BROAST-003', 'Fried Chicken Leg/Tigal', '', 5, '', 299, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 299, 299, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(35, 'BROAST-004', 'Fish Broast (500g)', '', 5, '', 1000, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 1000, 1000, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- BURGERS & SANDWICHES
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(36, 'BURG-001', 'Cheese Blast', '', 6, '', 499, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 499, 499, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(37, 'BURG-002', 'Spicy Burger', '', 6, '', 480, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 480, 480, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(38, 'BURG-003', 'Zing Burger', '', 6, '', 450, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(39, 'BURG-004', 'Chicken Fillet Burger', '', 6, '', 470, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 470, 470, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(40, 'BURG-005', 'Grilled Chicken Cheese Burger', '', 6, '', 450, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(41, 'BURG-006', 'Classic Beef Burger', '', 6, '', 750, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 750, 750, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(42, 'BURG-007', 'Sub Burger', '', 6, '', 350, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 350, 350, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(43, 'BURG-008', 'Tower Burger', '', 6, '', 700, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 700, 700, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(44, 'BURG-009', 'Aezal Burger', '', 6, '', 450, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(45, 'BURG-010', 'Lawa Burger', '', 6, '', 700, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 700, 700, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(46, 'BURG-011', 'Club Sandwich', '', 6, '', 480, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 480, 480, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(47, 'BURG-012', 'Grilled Sandwich', '', 6, '', 450, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- PIZZA with Variations
+-- Special Crown Crust
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(100, 'PIZZA-001', 'Special Crown Crust', '', 3, 'Pizza', 700, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 700, 700, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(101, 'PIZZA-001-S', 'Small', 'S', 3, 'Small Size', 700, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 100, '', 'Live', '', 700, 700, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(102, 'PIZZA-001-M', 'Medium', 'M', 3, 'Medium Size', 1300, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 100, '', 'Live', '', 1300, 1300, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(103, 'PIZZA-001-L', 'Large', 'L', 3, 'Large Size', 1800, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 100, '', 'Live', '', 1800, 1800, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(104, 'PIZZA-001-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 100, '', 'Live', '', 2200, 2200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Chicken Tikka
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(105, 'PIZZA-002', 'Chicken Tikka', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(106, 'PIZZA-002-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 105, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(107, 'PIZZA-002-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 105, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(108, 'PIZZA-002-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 105, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(109, 'PIZZA-002-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 105, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Fajita
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(110, 'PIZZA-003', 'Fajita', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(111, 'PIZZA-003-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 110, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(112, 'PIZZA-003-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 110, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(113, 'PIZZA-003-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 110, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(114, 'PIZZA-003-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 110, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Hot & Spicy
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(115, 'PIZZA-004', 'Hot & Spicy', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(116, 'PIZZA-004-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 115, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(117, 'PIZZA-004-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 115, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(118, 'PIZZA-004-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 115, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(119, 'PIZZA-004-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 115, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Malai Tikka
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(120, 'PIZZA-005', 'Malai Tikka', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(121, 'PIZZA-005-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 120, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(122, 'PIZZA-005-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 120, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(123, 'PIZZA-005-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 120, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(124, 'PIZZA-005-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 120, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Vegetarian
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(125, 'PIZZA-006', 'Vegetarian', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(126, 'PIZZA-006-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 125, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(127, 'PIZZA-006-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 125, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(128, 'PIZZA-006-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 125, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(129, 'PIZZA-006-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 125, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Pepperoni Pizza
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(130, 'PIZZA-007', 'Pepperoni Pizza', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(131, 'PIZZA-007-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 130, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(132, 'PIZZA-007-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 130, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(133, 'PIZZA-007-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 130, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(134, 'PIZZA-007-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 130, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Calzone Pizza
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(135, 'PIZZA-008', 'Calzone Pizza', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(136, 'PIZZA-008-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 135, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(137, 'PIZZA-008-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 135, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(138, 'PIZZA-008-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 135, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(139, 'PIZZA-008-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 135, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Cheese Lover
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(140, 'PIZZA-009', 'Cheese Lover', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(141, 'PIZZA-009-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 140, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(142, 'PIZZA-009-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 140, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(143, 'PIZZA-009-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 140, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(144, 'PIZZA-009-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 140, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Stuff Crust
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(145, 'PIZZA-010', 'Stuff Crust', '', 3, 'Pizza', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 600, 600, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(146, 'PIZZA-010-S', 'Small', 'S', 3, 'Small Size', 600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 145, '', 'Live', '', 600, 600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(147, 'PIZZA-010-M', 'Medium', 'M', 3, 'Medium Size', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 145, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(148, 'PIZZA-010-L', 'Large', 'L', 3, 'Large Size', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 145, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(149, 'PIZZA-010-XL', 'Extra Large', 'XL', 3, 'Extra Large Size', 2000, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 145, '', 'Live', '', 2000, 2000, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- Train Pizza
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(150, 'PIZZA-011', 'Train Pizza (28 Inch)', '', 3, 'Special Large Pizza', 3599, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 3599, 3599, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+
+-- MAIN COURSE
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(200, 'MAIN-001', 'Mandi Al Arab', '', 7, 'Main Course', 700, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 700, 700, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(201, 'MAIN-001-HALF', '1/2kg', '1/2kg', 7, 'Half Kilo', 700, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 200, '', 'Live', '', 700, 700, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(202, 'MAIN-001-ONE', '1kg', '1kg', 7, 'One Kilo', 1500, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 200, '', 'Live', '', 1500, 1500, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(203, 'MAIN-001-FULL', 'Full Chicken', 'Full', 7, 'Full Chicken', 2050, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 200, '', 'Live', '', 2050, 2050, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(204, 'MAIN-002', 'Shawai Chicken', '', 7, 'Main Course', 899, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 899, 899, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(205, 'MAIN-002-HALF', 'Half', 'Half', 7, 'Half Chicken', 899, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 204, '', 'Live', '', 899, 899, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(206, 'MAIN-002-FULL', 'Full', 'Full', 7, 'Full Chicken', 1799, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 204, '', 'Live', '', 1799, 1799, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(207, 'MAIN-003', 'Chicken Chilli Dry', '', 7, '', 699, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 699, 699, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(208, 'MAIN-004', 'Beef Chilli Dry', '', 7, '', 850, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 850, 850, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(209, 'MAIN-005', 'Manchurian', '', 7, '', 699, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 699, 699, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(210, 'MAIN-006', 'Special Fried Rice', '', 7, '', 599, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 599, 599, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(211, 'MAIN-007', 'Chicken Fried Rice', '', 7, '', 499, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 499, 499, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(212, 'MAIN-008', 'Vegetable Fried Rice', '', 7, '', 399, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 399, 399, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(213, 'MAIN-009', 'Stuff Chicken With Rice', '', 7, '', 700, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 700, 700, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(214, 'MAIN-010', 'Thai Chicken Noodles', '', 7, '', 450, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(215, 'MAIN-011', 'Chicken Chow Mein', '', 7, '', 499, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 499, 499, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- STEAK
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(300, 'STEAK-001', 'Cheese Bite Special Steak', '', 8, 'Steak', 1400, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 1400, 1400, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(301, 'STEAK-001-CHICKEN', 'Chicken', 'Chicken', 8, 'Chicken Steak', 1400, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 300, '', 'Live', '', 1400, 1400, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(302, 'STEAK-001-BEEF', 'Beef', 'Beef', 8, 'Beef Steak', 1800, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 300, '', 'Live', '', 1800, 1800, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(303, 'STEAK-002', 'Mushroom Steak', '', 8, 'Steak', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 1200, 1200, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(304, 'STEAK-002-CHICKEN', 'Chicken', 'Chicken', 8, 'Chicken Steak', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 303, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(305, 'STEAK-002-BEEF', 'Beef', 'Beef', 8, 'Beef Steak', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 303, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(306, 'STEAK-003', 'Mexican Steak', '', 8, 'Steak', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 1200, 1200, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(307, 'STEAK-003-CHICKEN', 'Chicken', 'Chicken', 8, 'Chicken Steak', 1200, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 306, '', 'Live', '', 1200, 1200, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(308, 'STEAK-003-BEEF', 'Beef', 'Beef', 8, 'Beef Steak', 1600, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 306, '', 'Live', '', 1600, 1600, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
+
+-- PASTA
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(400, 'PASTA-001', 'Fettuccine Alfredo Pasta', '', 9, '', 750, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 750, 750, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(401, 'PASTA-002', 'Mushroom Pasta', '', 9, '', 700, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 700, 700, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(402, 'PASTA-003', 'Penne Pasta', '', 9, '', 700, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 700, 700, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- CHINESE PLATTER
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(500, 'CHINESE-001', 'Soup', '', 10, '', 1299, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 1299, 1299, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(501, 'CHINESE-002', 'Chowmein', '', 10, '', 0, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 0, 0, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(502, 'CHINESE-003', 'Manchurian', '', 10, '', 0, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 0, 0, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(503, 'CHINESE-004', 'Chicken Chilli Dry', '', 10, '', 0, '[]', '', 1, 1, NULL, 'Veg No', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 0, 0, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(504, 'CHINESE-005', 'Vegetable Fried Rice', '', 10, '', 0, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 0, 0, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- DESSERT
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(600, 'DESSERT-001', 'Cheese Bite Kunafa Cheese', '', 11, '', 599, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 599, 599, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(601, 'DESSERT-002', 'Sizzling Brownie', '', 11, '', 499, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage No', 'Bar No', 0, NULL, 'Live', NULL, 499, 499, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- HOT BEVERAGES
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(700, 'HOT-001', 'Cappuccino', '', 12, '', 399, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 399, 399, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(701, 'HOT-002', 'Latte', '', 12, '', 350, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 350, 350, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(702, 'HOT-003', 'Hot Coffee', '', 12, '', 299, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 299, 299, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(703, 'HOT-004', 'Special Karak Tea', '', 12, '', 120, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 120, 120, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(704, 'HOT-005', 'Pink Tea', '', 12, '', 250, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 250, 250, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(705, 'HOT-006', 'Green Tea', '', 12, '', 70, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 70, 70, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- COLD BEVERAGES
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(800, 'COLD-001', 'Mint Margarita', '', 13, '', 299, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 299, 299, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(801, 'COLD-002', 'Blue Mojito', '', 13, '', 250, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 250, 250, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(802, 'COLD-003', 'Strawberry Mojito', '', 13, '', 250, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 250, 250, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(803, 'COLD-004', 'Ice Lemonade', '', 13, '', 199, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 199, 199, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(804, 'COLD-005', 'Fresh Lime', '', 13, '', 180, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 180, 180, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(805, 'COLD-006', 'Oreo Shake', '', 13, '', 350, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 350, 350, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(806, 'COLD-007', 'Oreo Banana Shake', '', 13, '', 399, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 399, 399, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(807, 'COLD-008', 'Seasonal Shake', '', 13, '', 350, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 350, 350, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(808, 'COLD-009', 'Peni Colada', '', 13, '', 450, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0, NULL),
+(809, 'COLD-010', 'Blue Colada', '', 13, '', 450, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 450, 450, '[]', 0, 0, 1, 0, 0, 0, '', 0);
+
+-- SOFT DRINKS (No prices visible, setting to 0)
+INSERT INTO `tbl_food_menus` (`id`, `code`, `name`, `alternative_name`, `category_id`, `description`, `sale_price`, `tax_information`, `tax_string`, `user_id`, `company_id`, `photo`, `veg_item`, `beverage_item`, `bar_item`, `parent_id`, `vr_ingr`, `del_status`, `vr_del_details`, `sale_price_take_away`, `sale_price_delivery`, `delivery_price`, `total_cost`, `loyalty_point`, `product_type`, `purchase_price`, `alert_quantity`, `ing_category_id`, `combo_ids`, `is_variation`) VALUES
+(900, 'SOFT-001', 'Soft Drinks', '', 14, 'Soft Drinks', 0, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 0, NULL, 'Live', NULL, 0, 0, '[]', 0, 0, 1, 0, 0, 0, '', 1, NULL),
+(901, 'SOFT-001-1.5L', '1.5Lt Sting 500ml', '1.5Lt', 14, '1.5 Liter', 0, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 900, '', 'Live', '', 0, 0, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(902, 'SOFT-001-1L', '1-Ltr Regular', '1L', 14, '1 Liter', 0, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 900, '', 'Live', '', 0, 0, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0, NULL),
+(903, 'SOFT-001-CAN', 'Can Mineral Water Large/Small', 'Can', 14, 'Can', 0, '[]', '', 1, 1, NULL, 'Veg Yes', 'Beverage Yes', 'Bar No', 900, '', 'Live', '', 0, 0, '{\"index_\":\"\"}', 0, 0, 1, NULL, NULL, NULL, NULL, 0);
