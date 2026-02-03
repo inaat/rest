@@ -61,16 +61,27 @@
 $active_group = 'default';
 $query_builder = TRUE;
 
+// Load local config if exists
+$db_config = array(
+	'hostname' => 'localhost',
+	'username' => 'u383002722_restaurant',
+	'password' => 'dLNP1qtPF;9',
+	'database' => 'u383002722_restaurant'
+);
+if (file_exists(__DIR__ . '/database_local.php')) {
+	include(__DIR__ . '/database_local.php');
+}
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'Root123!',
-	'database' => 'rest',
+	'hostname' => $db_config['hostname'],
+	'username' => $db_config['username'],
+	'password' => $db_config['password'],
+	'database' => $db_config['database'],
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
@@ -80,5 +91,5 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
-	'save_queries' => FALSE
+	'save_queries' => (ENVIRONMENT !== 'production')
 );

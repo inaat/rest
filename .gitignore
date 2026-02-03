@@ -1,0 +1,2 @@
+# Local configuration (contains sensitive credentials)
+application/config/database_local.php
