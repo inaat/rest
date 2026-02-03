@@ -536,14 +536,14 @@
                                         <?php echo lang('Add'); ?> <?php echo lang('Multiple_Currency'); ?></a></li>
                                 <li data-access="view-55" class="menu_assign_class" data-menu__cid="irp_32"><a class="child-menu" href="<?php echo base_url()?>MultipleCurrency/MultipleCurrencies">
                                         <?php echo lang('List'); ?> <?php echo lang('Multiple_Currency'); ?></a></li>
-                                <?php if($company_id==1): ?>
+                                <?php /* if($company_id==1): ?>
                                     <?php if(!isServiceAccessOnly('sGmsJaFJE')): ?>
                                         <li data-access="update-60" class="menu_assign_class" data-menu__cid="irp_32"><a class="child-menu" href="<?php echo base_url()?>Update/index">
                                                 <?php echo lang('software_update'); ?></a></li>
                                         <li data-access="uninstall-62" class="menu_assign_class" data-menu__cid="irp_32"><a class="child-menu" href="<?php echo base_url()?>Update/UninstallLicense">
                                             <?php echo lang('Uninstall_License'); ?></a></li>
                                     <?php endif; ?>
-                                <?php endif; ?>
+                                <?php endif; */ ?>
                               
 
                                 <li data-access="add-260" class="menu_assign_class" data-menu__cid="irp_32"><a class="child-menu" href="<?php echo base_url()?>paymentMethod/addEditPaymentMethod">
