@@ -64,9 +64,9 @@ $query_builder = TRUE;
 // Load local config if exists
 $db_config = array(
 	'hostname' => 'localhost',
-	'username' => 'u383002722_restaurant',
+	'username' => 'u383002722_restaurantt',
 	'password' => 'dLNP1qtPF;9',
-	'database' => 'u383002722_restaurant'
+	'database' => 'u383002722_restaurantt'
 );
 if (file_exists(__DIR__ . '/database_local.php')) {
 	include(__DIR__ . '/database_local.php');
