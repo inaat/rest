@@ -3380,7 +3380,7 @@ class Authentication extends Cl_Controller {
         $data['main_content'] = $this->load->view('master/foodMenu/foodMenuDetails', $data);
         echo json_encode($data['main_content']);
     }
-    public function updateOnlineFoodInfo($image='',$food_menu_id='',$hidden_outlet_id='',$type,$another_image='',$checked_value)
+    public function updateOnlineFoodInfo($image='',$food_menu_id='',$hidden_outlet_id='',$type='',$another_image='',$checked_value='')
     {
         $outlet_information = $this->Common_model->getDataById($hidden_outlet_id, "tbl_outlets");
         if($outlet_information){
