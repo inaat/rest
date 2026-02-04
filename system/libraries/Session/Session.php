@@ -340,6 +340,14 @@ class CI_Session {
 	 */
 	protected function _configure_sid_length()
 	{
+		// PHP 8.4+ uses a fixed session ID format, no configuration needed
+		if (PHP_VERSION_ID >= 80400)
+		{
+			// PHP 8.4+ uses 32-character base64url session IDs
+			$this->_sid_regexp = '[0-9a-zA-Z_-]{32}';
+			return;
+		}
+
 		if (PHP_VERSION_ID < 70100)
 		{
 			$hash_function = ini_get('session.hash_function');
