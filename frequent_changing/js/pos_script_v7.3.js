@@ -4779,6 +4779,10 @@
                             );
                             $("#table_dropdown_select").val('').trigger('change.select2');
                             $("#table_dropdown_select").prop("disabled", true);
+
+                            // Auto open delivery charge modal
+                            $("#charge_modal").addClass("active");
+                            $(".pos__modal__overlay").fadeIn(300);
                         }
                         do_addition_of_item_and_modifiers_price();
                     }
@@ -4833,6 +4837,10 @@
                     );
                     $("#table_dropdown_select").val('').trigger('change.select2');
                     $("#table_dropdown_select").prop("disabled", true);
+
+                    // Auto open delivery charge modal
+                    $("#charge_modal").addClass("active");
+                    $(".pos__modal__overlay").fadeIn(300);
 
                 }
                 do_addition_of_item_and_modifiers_price();
@@ -20011,6 +20019,12 @@
             $("#table_button").html("<i class='fal fa-table'></i> " + table_text);
             $("#table_button").removeClass("red_text");
         }
+    });
+
+    // Quick delivery amount buttons
+    $(document).on("click", ".quick_delivery_btn", function (e) {
+        let amount = $(this).attr("data-amount");
+        $("#delivery_charge").val(amount);
     });
 
   })(jQuery);

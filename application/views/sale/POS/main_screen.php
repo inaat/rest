@@ -1782,6 +1782,14 @@ foreach ($notifications as $single_notification){
                     <input type="text" name="" autocomplete="off" class="special_textbox " onfocus="select();"
                         placeholder="<?php echo lang('amount'); ?>" value="<?php echo escape_output($amount_default)?>" id="delivery_charge" />
                 </div>
+                <div class="quick_delivery_amounts" style="margin-top:10px; display:flex; gap:5px; flex-wrap:wrap;">
+                    <button type="button" class="quick_delivery_btn" data-amount="50" style="padding:8px 15px; cursor:pointer;">50</button>
+                    <button type="button" class="quick_delivery_btn" data-amount="100" style="padding:8px 15px; cursor:pointer;">100</button>
+                    <button type="button" class="quick_delivery_btn" data-amount="150" style="padding:8px 15px; cursor:pointer;">150</button>
+                    <button type="button" class="quick_delivery_btn" data-amount="200" style="padding:8px 15px; cursor:pointer;">200</button>
+                    <button type="button" class="quick_delivery_btn" data-amount="250" style="padding:8px 15px; cursor:pointer;">250</button>
+                    <button type="button" class="quick_delivery_btn" data-amount="300" style="padding:8px 15px; cursor:pointer;">300</button>
+                </div>
             </div>
             <div class="btn__box">
                 <button type="button" class="submit submit_to_return_modal"><?php echo lang('submit'); ?></button>
