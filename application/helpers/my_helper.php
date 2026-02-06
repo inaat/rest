@@ -2076,7 +2076,7 @@ function modifierIngredients($modifier_id) {
  * @return string
  * @param int
  */
-function getPaymentName($id,$online_payment_details) {
+function getPaymentName($id, $online_payment_details = '') {
     $CI = & get_instance();
     $getPaymentName = $CI->db->query("SELECT * FROM tbl_payment_methods where `id`='$id'")->row();
     if(isset($getPaymentName->name) && $getPaymentName->name){
