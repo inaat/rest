@@ -1224,6 +1224,9 @@ foreach ($notifications as $single_notification){
                                 <?php
                                 endif;
                                 ?>
+                                <select id="table_dropdown_select" class="select2 table_dropdown_select">
+                                    <option value=""><?php echo lang('table'); ?></option>
+                                </select>
                                 <select id="walk_in_customer" id="select_walk_in_customer" class="select2 select_walk_in_customer_custom">
                                     <option value=""><?php echo lang('customer'); ?></option>
                                     <!--This variable could not be escaped because this is html content-->

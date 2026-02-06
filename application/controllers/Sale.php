@@ -493,6 +493,7 @@ class Sale extends Cl_Controller {
         $data['payment_method_finalize'] = $this->Sale_model->getAllPaymentMethodsFinalize();
         $data['deliveryPartners'] = $this->Common_model->getAllByCompanyId($company_id, "tbl_delivery_partners");
         $data['areas'] = $this->Common_model->getAllByOutletId($outlet_id, 'tbl_areas');
+        $data['tables'] = array(); // Empty for now - will load via AJAX
         $data['only_modifiers'] = $this->Common_model->getAllByCompanyIdForDropdown($company_id, 'tbl_modifiers');
         $data['kitchens'] = $this->Common_model->getAllByOutletId($outlet_id, "tbl_kitchens");
         $data['notifications'] = $this->get_new_notification();
@@ -3890,6 +3891,12 @@ We hope to see you again!";
     public function getOrderedTable(){
         $getOrderedTable = $this->Common_model->getOrderedTable();
         echo json_encode($getOrderedTable);
+    }
+
+    public function getTablesForDropdown(){
+        $outlet_id = $this->session->userdata('outlet_id');
+        $tables = $this->db->get_where('tbl_tables', array('outlet_id' => $outlet_id, 'del_status' => 'Live'))->result();
+        echo json_encode($tables);
     }
 
     /**

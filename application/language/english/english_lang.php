@@ -270,6 +270,7 @@ $lang['cancel_order']='Cancel Order';
 $lang['kitchen_status']='Kitchen Status';
 $lang['waiter']='Waiter';
 $lang['table']='Table';
+$lang['select_table']='Select Table';
 $lang['item']='Item';
 $lang['price']='Price';
 $lang['qty']='Qty';

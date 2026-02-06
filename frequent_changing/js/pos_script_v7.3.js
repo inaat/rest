@@ -4748,6 +4748,7 @@
                             $("#charge_type").val('service').change();
                             $(".set_quick_action").removeClass("set_quick_action_active");
                             $(".get_area_table").eq(0).click();
+                            $("#table_dropdown_select").prop("disabled", false);
 
                         } else if (this_action.attr("data-id") == "take_away_button") {
                             $("#delivery_charge").val(take_away_service_charge);
@@ -4757,6 +4758,8 @@
                                 "data-table-checked",
                                 "unchecked"
                             );
+                            $("#table_dropdown_select").val('').trigger('change.select2');
+                            $("#table_dropdown_select").prop("disabled", true);
                             // $('.single_table_div[data-table-checked=checked]').css('background-color', 'red');
                         } else if (this_action.attr("data-id") == "delivery_button") {
                             /*delivery partner*/
@@ -4765,15 +4768,17 @@
                                 $("#show_delivery_partner").addClass("active");
                                 $(".pos__modal__overlay").fadeIn(200);
                             }
-  
+
                             $("#delivery_charge").val(delivery_amount);
                             $("#charge_type").val('delivery').change();
-  
+
                             $("#table_button").attr("disabled", true);
                             $(".single_table_div[data-table-checked=checked]").attr(
                                 "data-table-checked",
                                 "unchecked"
                             );
+                            $("#table_dropdown_select").val('').trigger('change.select2');
+                            $("#table_dropdown_select").prop("disabled", true);
                         }
                         do_addition_of_item_and_modifiers_price();
                     }
@@ -4798,7 +4803,8 @@
                     $("#delivery_charge").val(service_amount);
                     $("#charge_type").val('service').change();
                     $(".set_quick_action").removeClass("set_quick_action_active");
-                    $(".get_area_table").eq(0).click(); 
+                    $(".get_area_table").eq(0).click();
+                    $("#table_dropdown_select").prop("disabled", false);
                 } else if ($(this).attr("data-id") == "take_away_button") {
                     $("#delivery_charge").val(take_away_service_charge);
                     $("#charge_type").val('service').change();
@@ -4807,6 +4813,8 @@
                         "data-table-checked",
                         "unchecked"
                     );
+                    $("#table_dropdown_select").val('').trigger('change.select2');
+                    $("#table_dropdown_select").prop("disabled", true);
                     // $('.single_table_div[data-table-checked=checked]').css('background-color', 'red');
                 } else if ($(this).attr("data-id") == "delivery_button") {
                     let delivery_partner = Number($("#delivery_partner").val());
@@ -4814,16 +4822,18 @@
                         $("#show_delivery_partner").addClass("active");
                         $(".pos__modal__overlay").fadeIn(200);
                     }
-  
+
                     $("#delivery_charge").val(delivery_amount);
                     $("#charge_type").val('delivery').change();
-  
+
                     $("#table_button").attr("disabled", true);
                     $(".single_table_div[data-table-checked=checked]").attr(
                         "data-table-checked",
                         "unchecked"
                     );
-  
+                    $("#table_dropdown_select").val('').trigger('change.select2');
+                    $("#table_dropdown_select").prop("disabled", true);
+
                 }
                 do_addition_of_item_and_modifiers_price();
             }
@@ -6958,7 +6968,7 @@
                   toastr['error']((please_select_a_table_for_action), '');
               }
       });
-      $(document).on("click", "#table_button,.dine_in_button", function (e) {
+      $(document).on("click", "#table_button", function (e) {
         if ($(".order_table_holder .order_holder > .modification").length > 0) {
           let sale_id = $(
             ".order_table_holder .order_holder > .modification"
@@ -8506,7 +8516,8 @@
                   $("#hidden_table_name").val('');
                   $("#table_button").html("<i class='fal fa-table'></i> "+table_text);
                   $("#table_button").removeClass("red_text");
-  
+                  $("#table_dropdown_select").val('').trigger('change.select2');
+
                   let items_info = "";
   
                   items_info += '"items":';
@@ -9082,7 +9093,8 @@
                   $("#update_table_text").val('');
                   $("#table_button").html("<i class='fal fa-table'></i> "+table_text);
                   $("#table_button").removeAttr("red_text");
-  
+                  $("#table_dropdown_select").val('').trigger('change.select2');
+
                   let items_info = "";
                   items_info += '"items":';
                   items_info += "[";
@@ -11913,6 +11925,7 @@
           $("#hidden_table_name").val("");
           $("#table_button").html("<i class='fal fa-table'></i> "+table_text);
           $("#table_button").removeAttr("red_text");
+          $("#table_dropdown_select").val('').trigger('change.select2');
       }
     function add_order_table(obj,sale_no_new){
       for(let key in obj){
@@ -12965,21 +12978,24 @@
           }
           if (response.order_type == "1") {
             $(".main_top").find("button").attr("data-selected", "unselected");
-            
+
             $(".dine_in_button").attr("data-selected", "selected");
-  
+
             $("#table_button").attr("disabled", false);
+            $("#table_dropdown_select").prop("disabled", false);
           } else if (response.order_type == "2") {
             $(".main_top").find("button").attr("data-selected", "unselected");
-            
+
             $(".take_away_button").attr("data-selected", "selected");
-  
-            $("#table_button").attr("disabled", false);
+
+            $("#table_button").attr("disabled", true);
+            $("#table_dropdown_select").val('').trigger('change.select2');
+            $("#table_dropdown_select").prop("disabled", true);
           } else if (response.order_type == "3") {
             $(".main_top").find("button").attr("data-selected", "unselected");
-            
+
             $(".delivery_button").attr("data-selected", "selected");
-  
+
             $("#table_button").attr("disabled", true);
             $(".single_table_div[data-table-checked=checked]").attr(
               "data-table-checked",
@@ -12989,6 +13005,8 @@
               "background-color",
               "#ffffff"
             );
+            $("#table_dropdown_select").val('').trigger('change.select2');
+            $("#table_dropdown_select").prop("disabled", true);
           } else {
             $(".main_top").find("button").attr("data-selected", "unselected");
           }
@@ -14115,12 +14133,16 @@
       $("#sub_total_discount_amount").html(Number(response.sub_total_with_discount).toFixed(ir_precision));
       $("#all_items_vat").html(Number(response.vat).toFixed(ir_precision));
       $("#table_id").val(response.table_id);
-      
+
       $("#update_table_obj").html(JSON.stringify(response.orders_table));
       $("#hidden_table_name").val(response.orders_table_text);
       if(response.orders_table_text){
         $("#table_button").html("<i class='fal fa-table'></i> "+table_text+":"+response.orders_table_text);
         $("#table_button").addClass("red_text");
+      }
+      // Set table dropdown for modify order
+      if(response.table_id){
+        $("#table_dropdown_select").val(response.table_id).trigger('change.select2');
       }
   
       $("#all_items_discount").html(response.total_discount_amount);
@@ -19934,18 +19956,63 @@
       $(".menu_checker").each(function() {
         if(!($(this).find(".sub__menu__list").find("li").length)){
             $(this).remove();
-        } 
+        }
         setTimeout(function () {
             $(".menu_checker").each(function() {
                 if(!($(this).find(".sub__menu__list").find("li").length)){
                     $(this).remove();
-                }  
-               
+                }
+
             });
         }, 1000);
-    
+
     });
-  
+
+    // Load tables for dropdown on page load
+    function loadTablesDropdown() {
+        $.ajax({
+            url: base_url + "Sale/getTablesForDropdown",
+            method: "POST",
+            dataType: 'json',
+            success: function (tables) {
+                let options = '<option value="">' + inv_table + '</option>';
+                if (tables && tables.length > 0) {
+                    tables.forEach(function(table) {
+                        options += '<option value="' + table.id + '" data-area="' + table.area + '" data-name="' + table.name + '">' + table.name + '</option>';
+                    });
+                }
+                $("#table_dropdown_select").html(options);
+            },
+            error: function () {
+                console.log("Error loading tables");
+            }
+        });
+    }
+
+    // Load tables on page ready
+    loadTablesDropdown();
+
+    // Table dropdown change handler
+    $(document).on("change", "#table_dropdown_select", function (e) {
+        let table_id = $(this).val();
+        let table_name = $(this).find(":selected").attr("data-name") || '';
+
+        // Set hidden fields used by order save (same as modal selection)
+        $("#table_id").val(table_id);
+        $("#hidden_table_name").val(table_name);
+        $("#hidden_table_capacity").val("1");
+
+        // Update table button text (same as modal selection)
+        if (table_id && table_name) {
+            toastr['success']((you_are_ordering_now_on_your_selected_table), '');
+            $("#table_button").html("<i class='fal fa-table'></i> " + table_text + ":" + table_name);
+            $("#table_button").addClass("red_text");
+        } else {
+            $("#table_button").html("<i class='fal fa-table'></i> " + table_text);
+            $("#table_button").removeClass("red_text");
+        }
+    });
+
   })(jQuery);
 
   
